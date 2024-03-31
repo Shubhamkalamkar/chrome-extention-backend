@@ -3,6 +3,7 @@ const bookmarkController = require('../../controllers/bookmark/main.bookmark.con
 const bookmarkRoute = require('express').Router()
 
 bookmarkRoute.post('/create', bookmarkController.createBookmark)
-bookmarkRoute.get('/getAll', bookmarkController.getAllBookmarks)
+bookmarkRoute.post('/getAll', bookmarkController.getAllBookmarks)
+bookmarkRoute.post('/getbyfolder', bookmarkController.getByfolder)
 
 module.exports = bookmarkRoute

@@ -1,7 +1,8 @@
 const Folder = require("../../../models/folder.model");
 
 const getAllFolder = (req, res, next) => {
-    Folder.find()
+    let { email } = req.body
+    Folder.find({ email: email })
         .then(folder => {
             res.json(folder);
         })

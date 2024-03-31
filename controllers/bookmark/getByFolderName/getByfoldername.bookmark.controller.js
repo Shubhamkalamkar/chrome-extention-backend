@@ -1,8 +1,9 @@
 const Bookmark = require("../../../models/bookmark.model");
 
-const getAllBookmarks = (req, res, next) => {
-    let { email } = req.body
-    Bookmark.find({ email: email })
+const getByfolder = (req, res, next) => {
+    // let folder = req.params.name;
+    let {folder, email} = req.body
+    Bookmark.find({ folder: folder, email:email })
         .then(bookmarks => {
             res.json(bookmarks);
         })
@@ -12,4 +13,4 @@ const getAllBookmarks = (req, res, next) => {
         });
 };
 
-module.exports = getAllBookmarks;
+module.exports = getByfolder;

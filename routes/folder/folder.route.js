@@ -3,6 +3,6 @@ const folderController = require('../../controllers/folder/main.folder.controlle
 const folderRoute = require('express').Router()
 
 folderRoute.post('/create', folderController.createFolder)
-folderRoute.get('/getAll', folderController.getAllFolder)
+folderRoute.post('/getAll', folderController.getAllFolder)
 
 module.exports = folderRoute

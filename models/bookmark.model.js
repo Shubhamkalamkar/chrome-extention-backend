@@ -6,13 +6,16 @@ const bookmarkSchema = new Schema(
         url: {
             type: String
         },
+        email: {
+            type: String
+        },
         title: {
             type: String
         },
         tabIconUrl: {
             type: String
         },
-        note:{
+        note: {
             type: String
         },
         folder: {
