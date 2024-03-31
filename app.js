@@ -11,6 +11,10 @@ app.use(cors())
 
 app.use(express.json())
 
+app.use("/test",(req,res)=>{
+    res.send("hello from server")
+})
+
 app.use(mainRoute)
 app.use(errorHandler)
 
